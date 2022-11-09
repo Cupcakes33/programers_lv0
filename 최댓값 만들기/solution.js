@@ -18,3 +18,10 @@ function solution(numbers) {
   }
   return (answer = max);
 }
+
+// 다른사람들의 solution
+// function solution(numbers) {
+//     numbers.sort((a,b)=>b-a);
+//     return numbers[0] * numbers[1];
+// }
+// sort((a,b)=>(b-a)) 로 내림차순 정렬 한 후 0번째 인덱스와 1번째 인덱스를 곱할 수도 있다.
