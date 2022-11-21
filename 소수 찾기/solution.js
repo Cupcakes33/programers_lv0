@@ -14,9 +14,7 @@ function solution(n) {
   let filledArr = new Array(n + 1).fill(0);
   for (let i = 2; i <= sqrt; i++) {
     for (let j = 2; j <= n / i; j++) {
-      // console.log(`${i} / ${j} / ${n} `);
       filledArr[i * j] = 1;
-      // console.log(filledArr);
     }
   }
   return (answer = filledArr.filter((e) => e !== 1).length - 2);

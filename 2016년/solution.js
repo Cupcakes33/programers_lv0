@@ -13,24 +13,16 @@ solution을 완성하세요. 요일의 이름은 일요일부터 토요일까지
 function solution(a, b) {
   var answer = "";
   let weeks = ["FRI", "SAT", "SUN", "MON", "TUE", "WED", "THU"];
-let day = 0
-    day = b - 1;
-  
+  let day = 0;
+  day = b - 1;
+
   for (let i = 1; i < a; i++) {
-    if(i>7){
-        if(i%2==0){
-            day+=31
-        } else {
-            day+=30
-        }
-    } else if(i == 2){
-        day+=29;
+    if (i > 7) {
+      i % 2 == 0 ? (day += 31) : (day += 30);
+    } else if (i == 2) {
+      day += 29;
     } else {
-        if(i%2==0){
-            day+=30
-        }else{
-            day+=31
-        }
+      i % 2 == 0 ? (day += 30) : (day += 31);
     }
   }
   let week = day % 7;
